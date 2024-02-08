@@ -1,0 +1,21 @@
+<h1>{{title}}</h1>
+<p>This is about a story</p>
+
+<hr />
+
+{{#if context}}
+
+  <h3>名字： {{context.story_name}}</h3>
+
+  <h5>作者： {{context.story_author}}</h5>
+
+  <br />
+  <p>內容：</p>
+  <p style="margin: 5px 20px">{{context.story_content}}</p>
+
+{{else}}
+
+  <h3>錯誤</h3>
+  <p>{{errMessage}}</p>
+
+{{/if}}

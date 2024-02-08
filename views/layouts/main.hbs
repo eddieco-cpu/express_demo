@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header ul { display: flex; flex-wrap: wrap;} header li { margin: 10px
+      30px; margin-left: 0; } main { min-height: 70vh; } footer { text-align:
+      center; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/notes">Notes</a></li>
+          <li><a href="/story/1">Story {{#if story}}1{{/if}}</a></li>
+          {{#if story}}
+            <li><a href="/story/2">Story 2</a></li>
+            <li><a href="/story/3">Story 3</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main style="">{{{body}}}</main>
+    <hr />
+    <footer>© My Website 2023</footer>
+  </body>
+</html>

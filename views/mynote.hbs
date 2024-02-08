@@ -1,0 +1,38 @@
+<h1>{{title}}</h1>
+
+
+<br>
+<h3>Note 1: help func</h3>
+
+<p>{{text}}</p>
+<p>{{text 'This is my sentence'}}</p>
+<p>9 - 5 = {{minus 9 5}}</p>
+<p>1 + 2 + 3 + 4 + 5 + 6 = {{sum_up 1 2 3 4 5 6}}</p>
+
+
+<br>
+<h3>Note 2: components via hbs</h3>
+
+{{> test words="abc" }}
+
+
+<br>
+<h3>Note 3: components via myself help func</h3>
+
+{{{component "notes/comp" }}}
+{{{component 'notes/comp_vars' '{"varA": 123456, "varB": "abcdef"}' }}}
+
+
+<br>
+<h3>Note 4: picture</h3>
+<a href="https://javascript.plainenglish.io/server-side-image-rendering-with-express-handlebars-cb224187b276">link</a>
+<br>
+<img src="/static/imgs/90x34.png" alt="">
+
+{{!-- 
+step 1. app.use("/static", express.static("assets"));  // in app.js
+step 2. <img src="/static/imgs/90x34.png" alt="">   // direct use here
+ --}}
+
+
+

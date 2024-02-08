@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<p>Welcome to my website!</p>
+
+<!-- only use in index page -->
+<p>random number</p>
+<i>{{randomNum 9 200}}</i>
+<i>{{randomNum 9 200}}</i>
+
+<script>
+  /* log data via custom helper */ console.log({{{json title}}}); /* log custom
+  helper */ console.log({{randomNum 9 200}}); /* log hbs */ console.log({{{json}}});
+</script>
